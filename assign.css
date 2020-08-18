@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+<body style="background-color:aquamarine">
+   <h2 style="text-align: center;"> Assignment </h2></br></br>
+    <form>
+       <fieldset style="background-color:white">
+        <h2>Weight Converter</h2>
+<p>Type a value in the Pounds field to convert the value to <span style="text-decoration: bold">Kilograms:</span></p>
+<p>
+  <label>Pounds</label>
+  <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Kilograms: <span id="outputKilograms"></span></p>
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/2.2046;
+}
+</script><span id="outputKilograms"></span></p>
+        </fieldset> 
+    </form>
+</br></br></br>
+<h1> Random Quote Generator</h1>
+    <div  id="quoteDisplay" style="background-color: white; padding: auto;margin: auto">
+    </div> 
+    <button onclick="red()" style="background-color: red; width:20px; height:20px"></button>
+    <button onclick="green()" style="background-color:green; width:20px; height:20px"></button>
+    <button onclick="yellow()" style="background-color:yellow; width:20px; height:20px"></button>
+    <button onclick="violet()" style="background-color: violet; width:20px; height:20px"></button>
+</br></br>
+    <button onclick="newQuote()">New Quote</button>
+<script src="java.jss"> </script>
+<H2>Magic Page</H2></br></br>
+    <form style="background-color: white">
+        <fieldset>
+            <h3>Magic!</h3>
+            <input type="text" id="myInput"> <br><br>
+  <button onclick="document.getElementById('myInput').value = ''">Clear it</button>
+   <button onclick="cap()">Cap</button>
+</fieldset>       
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+<body style="background-color:aquamarine">
+   <h2 style="text-align: center;"> Assignment </h2></br></br>
+    <form>
+       <fieldset style="background-color:white">
+        <h2>Weight Converter</h2>
+<p>Type a value in the Pounds field to convert the value to <span style="text-decoration: bold">Kilograms:</span></p>
+<p>
+  <label>Pounds</label>
+  <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Kilograms: <span id="outputKilograms"></span></p>
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/2.2046;
+}
+</script><span id="outputKilograms"></span></p>
+        </fieldset> 
+    </form>
+</br></br></br>
+<h1> Random Quote Generator</h1>
+    <div  id="quoteDisplay" style="background-color: white; padding: auto;margin: auto">
+    </div> 
+    <button onclick="red()" style="background-color: red; width:20px; height:20px"></button>
+    <button onclick="green()" style="background-color:green; width:20px; height:20px"></button>
+    <button onclick="yellow()" style="background-color:yellow; width:20px; height:20px"></button>
+    <button onclick="violet()" style="background-color: violet; width:20px; height:20px"></button>
+</br></br>
+    <button onclick="newQuote()">New Quote</button>
+<script src="java.jss"> </script>
+<H2>Magic Page</H2></br></br>
+    <form style="background-color: white">
+        <fieldset>
+            <h3>Magic!</h3>
+            <input type="text" id="myInput"> <br><br>
+  <button onclick="document.getElementById('myInput').value = ''">Clear it</button>
+</br></br></br></br> 
+
+
+<H3>Temperature Converter</H2></br></br>
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+</br></br></br> 
+
+<H4>Min Max Sum Average</H4>
+ <fieldset>
+    <h4>MMSA</h4>
+<fieldset style="background-color:purple">
+<table width="50%" border="0" align="center">
+      <tr>
+        <td width="13%">Input Series of Number:</td>
+        <td width="29%"><input name="box1" type="text" id="box1" value="12,12,22,9,1,20" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Max :</td>
+        <td><div id="max"> </div></td>
+      </tr>
+      <tr>
+        <td>Min :</td>
+        <td><div id="min"> </div></td>
+      </tr>
+      <tr>
+        <td>Sum  :</td>
+        <td><div id="sum"> </div></td>
+      </tr>
+      <tr>
+        <td>Average :</td>
+        <td><div id="avg"> </div></td>
+      </tr>
+      <tr>
+        <td>Reverse Order :</td>
+        <td><div id="reverse"> </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td></td>
+      </tr>
+    </table>
+<button type="button" onclick="calculate()">calculate</button>
+<script src="Calculation.jss"> </script>
+</br></br></br> 
+
+
+
+</fieldset>       
+</body>
+</html>
