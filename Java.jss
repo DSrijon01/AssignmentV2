@@ -27,6 +27,63 @@ function violet() {
   document.getElementById("quoteDisplay").style.backgroundColor = "violet";
 }
 
-function myFunction() {
-  document.getElementById("myInput").style.textTransform = "capitalize";
+
+var cnt = 0;
+function fnc_clr(id001){
+    cnt = 0;
+    document.getElementById(id001).value = "";
 }
+function fnc_case(idx){
+    var txt = document.getElementById(idx).value;
+    if(cnt % 2 == 0){
+        document.getElementById(idx).value = txt.toUpperCase();
+    }
+    else{
+        document.getElementById(idx).value = txt.toLowerCase();
+    }
+    cnt++;
+};
+function fnc_sort(idx){
+    var tx = document.getElementById(idx).value;
+    var tx1 = tx.split("\n");
+    tx1.sort();
+    document.getElementById(idx).value = tx1.join("\n");
+};
+function fnc_rev(idx){
+    var tx = document.getElementById(idx).value;
+    var tx1 = tx.split("\n");
+    for(let i = 0; i < tx1.length; i++){
+        let st1 = tx1[i].split("");
+        st1.reverse();
+        tx1[i] = st1.join("");
+    }
+    document.getElementById(idx).value = tx1.join("\n");
+};
+function fnc_bnk(idx){
+    var tx = document.getElementById(idx).value;
+    var tx1 = tx.split("\n");
+    for(let i = 0; i < tx1.length; i++){
+        let st1 = tx1[i].split(" ");
+        tx1[i] = st1.join("");
+    }
+    document.getElementById(idx).value = tx1.join("\n");
+};
+function fnc_add(idx){
+    var tx = document.getElementById(idx).value;
+    var tx1 = tx.split("\n");
+    for(let i = 0; i < tx1.length; i++){
+        tx1[i] = (i + 1) + " " + tx1[i];
+    }
+    document.getElementById(idx).value = tx1.join("\n");
+};
+function fnc_ran(idx){
+    var tx = document.getElementById(idx).value;
+    var tx1 = tx.split("\n");
+    for(let i = 0; i < tx1.length; i++){
+        let idx = Math.floor(Math.random() * (tx1.length));
+        let tem = tx1[i];
+        tx1[i] = tx1[idx];
+        tx1[idx] = tem;
+    }
+    document.getElementById(idx).value = tx1.join("\n");
+};

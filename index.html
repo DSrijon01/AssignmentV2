@@ -34,13 +34,30 @@ function weightConverter(valNum) {
 </br></br>
     <button onclick="newQuote()">New Quote</button>
 <script src="java.jss"> </script>
+
+
 <H2>Magic Page</H2></br></br>
-    <form style="background-color: white">
-        <fieldset>
-            <h3>Magic!</h3>
-            <input type="text" id="myInput"> <br><br>
-  <button onclick="document.getElementById('myInput').value = ''">Clear it</button>
-</br></br></br></br> 
+ <div style="background-color: gray; margin: 95px;">
+        <h1 style="margin-left: 10px; margin-top: 5px;">Magic!</h1>
+        <fieldset style="margin-right: auto; margin-left: auto;">
+            <textarea name="txtbox" id="idtxtarea" cols="100" rows="10"></textarea>
+        </fieldset>
+        <div class="btn_arae">
+            <button onclick="fnc_clr('idtxtarea')">Clear It</button>
+            <button onclick="fnc_case('idtxtarea')">Capitalize</button>
+            <button onclick="fnc_sort('idtxtarea')">Sort</button>
+            <button onclick="fnc_rev('idtxtarea')">Reverse</button>
+            <button onclick="fnc_bnk('idtxtarea')">Strip Blank</button>
+            <button onclick="fnc_add('idtxtarea')">Add Number</button>
+            <button onclick="fnc_ran('idtxtarea')">Shuffle</button>
+        </div>
+        <script src="Java.jss"> </script>
+        <p id="pck"></p>
+    </div>
+</br></br>
+
+
+
 
 
 <H3>Temperature Converter</H2></br></br>
